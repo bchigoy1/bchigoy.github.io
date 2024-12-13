@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.93f0e3df.css",
-    "main.js": "/static/js/main.d9ff246f.js",
-    "static/js/488.3864a508.chunk.js": "/static/js/488.3864a508.chunk.js",
-    "index.html": "/index.html",
-    "main.93f0e3df.css.map": "/static/css/main.93f0e3df.css.map",
-    "main.d9ff246f.js.map": "/static/js/main.d9ff246f.js.map",
-    "488.3864a508.chunk.js.map": "/static/js/488.3864a508.chunk.js.map"
+    "main.css": "/bchigoy.github.io/static/css/main.93f0e3df.css",
+    "main.js": "/bchigoy.github.io/static/js/main.b839551c.js",
+    "static/js/488.3864a508.chunk.js": "/bchigoy.github.io/static/js/488.3864a508.chunk.js",
+    "index.html": "/bchigoy.github.io/index.html",
+    "main.93f0e3df.css.map": "/bchigoy.github.io/static/css/main.93f0e3df.css.map",
+    "main.b839551c.js.map": "/bchigoy.github.io/static/js/main.b839551c.js.map",
+    "488.3864a508.chunk.js.map": "/bchigoy.github.io/static/js/488.3864a508.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.93f0e3df.css",
-    "static/js/main.d9ff246f.js"
+    "static/js/main.b839551c.js"
   ]
 }
