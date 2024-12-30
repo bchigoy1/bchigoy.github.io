@@ -6,6 +6,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import Presentations from  './components/Presentations';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Experience experience={portfolioData.experience} />
         <Projects />
         <Skills skills={portfolioData.skills} />
+	<Presentations presentations={portfolioData.presentations} />
         <Contact personal={portfolioData.personal} />
       </main>
     </div>

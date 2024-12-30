@@ -1,7 +1,7 @@
 {
   "name": "bchigoy.github.io",
   "version": "0.1.0",
-  "homepage": "https://bchigoy1.github.io",
+  "homepage": "https://bchigoy1.github.io/bchigoy.github.io",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
