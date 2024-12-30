@@ -164,20 +164,28 @@ export const portfolioData = {
 
   presentations: [
     {
-      title: "Vehicle Occupants and Driver Behavior Analysis",
-      year: "2020"
+      title: "Vehicle Occupants and Driver Behavior: An Assessment of Vulnerable User Groups",
+      year: "2020 - 99th Transportation Research Board Annual Meeting"
+    },
+    {
+      title: "Identifying Truck Bias in LBS Data",
+      year: "2020 - 99th Transportation Research Board Annual Meeting"
     },
     {
       title: "Cloud-Based Data Applications for Travel Research",
-      year: "2018"
+      year: "2018 - TRB 16th National Tools of the Trade Conference"
     },
     {
-      title: "GPS and Cell Data Implementation Strategies",
-      year: "2018"
+      title: "GPS and Celllular Data Implementation Strategies for Medium and Small Cities",
+      year: "2018 - TRB 16th National Tools of the Trade Conference"
     },
     {
-      title: "Transportation Planning Scenario Tools",
-      year: "2016"
-    }
+      title: "Texas Statewide Vehicle Miles of Travel Scenario Calculation Tool",
+      year: "2016 - TRB Use of Scenario Planning in Transportation Planning"
+    },    
+    {
+      title: "Comparison of Cell, GPS and Bluetooth Derived Travel Data",
+      year: "2015 - TRB 15th National Tools of the Trade Conference"
+    },
   ]
 };
