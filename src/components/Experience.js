@@ -1,32 +1,28 @@
 import React from 'react';
+import { portfolioData } from '../data/portfolio-data';
+import ContentRenderer from './ContentRenderer';
 
-const Experience = ({ experience }) => {
-  return (
-    <section className="mb-12">
-      <h2 className="text-2xl font-bold mb-6">Professional Experience</h2>
-      <div className="space-y-8">
-        {experience.map((job, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-            <div className="flex justify-between items-start">
-              <div>
-                <h3 className="text-xl font-semibold">{job.company}</h3>
-                <p className="text-lg text-gray-600">{job.role}</p>
-              </div>
-              <div className="text-right">
-                <p className="text-gray-600">{job.period}</p>
-                <p className="text-gray-500">{job.location}</p>
-              </div>
-            </div>
-            <ul className="mt-4 list-disc pl-5 space-y-2">
-              {job.highlights.map((highlight, i) => (
-                <li key={i} className="text-gray-700">{highlight}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
+const Experience = () => {
+ const { teamBuilding, infrastructure, improvingLives } = portfolioData.sections;
+ 
+ return (
+   <>
+     <section id="team-building" className="mb-24">
+       <h2 className="text-3xl font-bold mb-6">{teamBuilding.title}</h2>
+       <ContentRenderer content={teamBuilding.content} />
+     </section>
+
+     <section id="infrastructure" className="mb-24">
+       <h2 className="text-3xl font-bold mb-6">{infrastructure.title}</h2>
+       <ContentRenderer content={infrastructure.content} />
+     </section>
+
+     <section id="improving-lives" className="mb-24">
+       <h2 className="text-3xl font-bold mb-6">{improvingLives.title}</h2>
+       <ContentRenderer content={improvingLives.content} />
+     </section>
+   </>
+ );
 };
 
 export default Experience;

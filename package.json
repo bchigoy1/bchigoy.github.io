@@ -37,5 +37,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.25.9",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-react": "^7.26.3",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.3",
+    "function.prototype.name": "^1.1.8"
   }
 }

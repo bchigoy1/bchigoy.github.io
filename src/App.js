@@ -1,25 +1,27 @@
 import React from 'react';
 import { portfolioData } from './data/portfolio-data';
-import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import Banner from './components/Banner';
 import Summary from './components/Summary';
 import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
-import Presentations from  './components/Presentations';
+import Research from './components/Research';
+import Background from './components/Background';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-50">
-      <Header personal={portfolioData.personal} />
-      <main className="max-w-5xl mx-auto px-4 py-8">
-        <Summary />
-        <Experience experience={portfolioData.experience} />
-        <Projects />
-        <Skills skills={portfolioData.skills} />
-	<Presentations presentations={portfolioData.presentations} />
-        <Contact personal={portfolioData.personal} />
-      </main>
+    <div className="flex min-h-screen bg-white">
+      <div className="fixed w-64 h-full">
+        <Sidebar personal={portfolioData.personal} />
+      </div>
+      <div className="ml-64 flex-1">
+        <Banner />
+        <main className="max-w-4xl mx-auto px-8 py-12">
+          <Summary />
+          <Experience />
+          <Research />
+          <Background />
+        </main>
+      </div>
     </div>
   );
 }
