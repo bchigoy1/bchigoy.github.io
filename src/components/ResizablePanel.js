@@ -52,9 +52,10 @@ const ResizablePanel = ({ children, minWidth = 250, maxWidth = 600 }) => {
 
   return (
     <div 
-      className={`fixed right-0 top-0 h-full border-l bg-white ${
-        isMobile ? 'w-full' : ''
-      }`}
+      className={`
+        ${isMobile ? 'relative w-full' : 'fixed right-0'} 
+        top-0 h-full border-l bg-white
+      `}
       style={{ width: isMobile ? '100%' : width }}
     >
       {/* Drag handle - only show on desktop */}
