@@ -36,8 +36,8 @@ function Projects({ projects, sectionId = 'projects' }) {
           onClick={toggleContent}
           className={`mt-4 p-2 rounded text-white font-bold text-lg ${
             isOpen
-              ? 'bg-gray-200 text-black hover:bg-gray-200 text-left'
-              : 'bg-gray-200 text-black hover:bg-gray-200 text-left'
+              ? 'bg-gray-500 text-black hover:bg-gray-500 text-left'
+              : 'bg-gray-500 text-black hover:bg-gray-500 text-left'
           } w-full`}
         >
           {isOpen ? 'Hide Projects' : 'Projects'}
