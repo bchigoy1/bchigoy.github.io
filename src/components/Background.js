@@ -1,15 +1,14 @@
 import React from 'react';
-import { portfolioData } from '../data/portfolio-data';
+import ContentRenderer from './ContentRenderer';
 
-const Background = () => {
-  const { background } = portfolioData.sections;
-  
+const Background = ({ data }) => {
+  if (!data) return null;
+
   return (
-    <section id="background" className="mb-24">
-      <h2 className="text-3xl font-bold mb-6">{background.title}</h2>
-      <div className="prose lg:prose-lg">
-        <p>{background.content}</p>
-      </div>
+    // <section id="background" className="mb-24">
+    <section id="background">
+      <h2 className="text-xl font-bold mb-4">{data.title}</h2>
+      <ContentRenderer content={data.content} />
     </section>
   );
 };
