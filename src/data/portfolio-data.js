@@ -136,7 +136,7 @@ export const portfolioData = {
     infrastructure: {
       title: "Infrastructure and Research Innovation Through User-Centered Design",
       content: [
-        "At Whitman, Requardt and Associates, I established a data engineering and science practice focused on user needs:",
+        "At Whitman, Requardt and Associates, I am helpimg establishing a data engineering and science practice focused on user needs:",
         {
           type: 'bullet',
           content: "Building cross-functional teams that blend technical expertise with user-centered design thinking"
