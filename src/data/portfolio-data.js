@@ -42,11 +42,11 @@ export const portfolioData = {
       description: "Managed data engineering, data science, and digital product development"
     },
     {
-      period: "April 2013 - April 2020",
-      title: "Associate Research Scientist @ Texas A&M Transportation Institute",
-      location: "Asheville, NC",
+      period: "May 2017",
+      title: "Researcher of the Year @ Texas A&M Transportation Institute",
+      location: "Austin, TX",
       link: "https://tti.tamu.edu/",
-      description: "Optimized data collection, engineering and science workflows."
+      description: "TTI's Highest Award for Innovative Work and Applications."
     },
     {
       period: "April 2015 - April 2020",
@@ -55,13 +55,7 @@ export const portfolioData = {
       link: "https://tti.tamu.edu/",
       description: "Developed Big Data and Data Science initiatives."
     },
-    {
-      period: "May 2017",
-      title: "Researcher of the Year @ Texas A&M Transportation Institute",
-      location: "Austin, TX",
-      link: "https://tti.tamu.edu/",
-      description: "TTI's Highest Award for Innovative Work and Applications."
-    },
+ 
     {
       period: "April 2013 - April 2015",
       title: "Research Specialist @ Texas A&M Transportation Institute",
