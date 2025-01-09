@@ -56,6 +56,13 @@ export const portfolioData = {
       description: "Developed Big Data and Data Science initiatives."
     },
     {
+      period: "May 2017",
+      title: "Researcher of the Year @ Texas A&M Transportation Institute",
+      location: "Austin, TX",
+      link: "https://tti.tamu.edu/",
+      description: "TTI's Highest Award for Innovative Work and Applications."
+    },
+    {
       period: "April 2013 - April 2015",
       title: "Research Specialist @ Texas A&M Transportation Institute",
       location: "Austin, TX",
@@ -137,10 +144,7 @@ export const portfolioData = {
       title: "Infrastructure and Research Innovation Through User-Centered Design",
       content: [
         "At Whitman, Requardt and Associates, I am helping establise a data engineering and science practice focused on user needs:",
-        {
-          type: 'bullet',
-          content: "Building cross-functional teams that blend technical expertise with user-centered design thinking"
-        },
+
         {
           type: 'bullet',
           content: "Developed solutions that doubled data accessibility while maintaining intuitive user experiences"
