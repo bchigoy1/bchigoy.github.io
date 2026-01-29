@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Package } from 'lucide-react';
+import { BrainCircuit } from 'lucide-react';
 
-function Products({ products, sectionId = 'products' }) {
+function AI({ ai, sectionId = 'ai' }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -54,16 +54,16 @@ function Products({ products, sectionId = 'products' }) {
             touch-manipulation
             transition-colors
             ${isOpen
-              ? 'bg-teal-700 text-white'
-              : 'bg-teal-600 text-white hover:bg-teal-700'}
+              ? 'bg-blue-700 text-white'
+              : 'bg-blue-600 text-white hover:bg-blue-700'}
             flex
             items-center
             justify-between
           `}
         >
           <span className="flex items-center gap-2">
-            <Package size={20} />
-            {isOpen ? 'Hide Products' : 'Products'}
+            <BrainCircuit size={20} />
+            {isOpen ? 'Hide AI' : 'AI'}
           </span>
           <svg
             className={`w-5 h-5 transform transition-transform ${isOpen ? 'rotate-180' : ''}`}
@@ -79,13 +79,13 @@ function Products({ products, sectionId = 'products' }) {
 
       {isOpen && (
         <div className="mt-4">
-          {Object.keys(products.sections).map((sectionKey) => (
+          {Object.keys(ai.sections).map((sectionKey) => (
             <div key={sectionKey} className="mb-8">
               <h3 className="text-lg font-semibold mb-4">
-                {products.sections[sectionKey].title}
+                {ai.sections[sectionKey].title}
               </h3>
               <div className="grid grid-cols-1 gap-6">
-                {products.sections[sectionKey].items.map((item, index) => (
+                {ai.sections[sectionKey].items.map((item, index) => (
                   <div key={index} className="relative border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow bg-white">
                     <div className="flex flex-col gap-4">
                       <div className="flex-1">
@@ -103,12 +103,6 @@ function Products({ products, sectionId = 'products' }) {
                             item.title
                           )}
                         </h4>
-                        {item.users && (
-                          <p className="text-sm text-gray-600 mb-2">
-                            <span className="font-medium">Users: </span>
-                            {item.users}
-                          </p>
-                        )}
                         {item.details && item.details.length > 0 && (
                           <ul className="list-disc ml-6">
                             {item.details.map((detail, detailIndex) => {
@@ -150,7 +144,7 @@ function Products({ products, sectionId = 'products' }) {
           <div className="relative max-w-[95vw] max-h-[95vh]">
             <img
               src={selectedImage}
-              alt="Product detail"
+              alt="AI detail"
               className="max-h-[95vh] object-contain rounded-lg"
               onClick={(e) => e.stopPropagation()}
             />
@@ -169,4 +163,4 @@ function Products({ products, sectionId = 'products' }) {
   );
 }
 
-export default Products;
+export default AI;

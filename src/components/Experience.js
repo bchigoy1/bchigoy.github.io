@@ -3,28 +3,22 @@ import ContentRenderer from './ContentRenderer';
 
 const Experience = ({ teamBuilding, infrastructure, improvingLives }) => {
   return (
-    <>
-      {/* <section id="team-building" className="mb-24"> */}
-      <section id="team-building">
+    <div className="space-y-10 md:space-y-16">
+      <section id="improving-lives">
+        <h2 className="text-xl font-bold mb-4 text-brand-900">{improvingLives.title}</h2>
+        <ContentRenderer content={improvingLives.content} />
+      </section>
 
-        <h2 className="text-xl font-bold mb-4">{teamBuilding.title}</h2>
+      <section id="team-building">
+        <h2 className="text-xl font-bold mb-4 text-brand-900">{teamBuilding.title}</h2>
         <ContentRenderer content={teamBuilding.content} />
       </section>
 
-      {/* <section id="infrastructure" className="mb-24"> */}
       <section id="infrastructure">
-
-        <h2 className="text-xl font-bold mb-4">{infrastructure.title}</h2>
+        <h2 className="text-xl font-bold mb-4 text-brand-900">{infrastructure.title}</h2>
         <ContentRenderer content={infrastructure.content} />
       </section>
-
-      {/* <section id="improving-lives" className="mb-24"> */}
-      <section id="improving-lives">
-
-        <h2 className="text-xl font-bold mb-4">{improvingLives.title}</h2>
-        <ContentRenderer content={improvingLives.content} />
-      </section>
-    </>
+    </div>
   );
 };
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Presentation } from 'lucide-react';
 
 function Learning({ learning, sectionId = 'presentations' }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ function Learning({ learning, sectionId = 'presentations' }) {
     if (detail.type === 'link') {
       if (detail.href) {
         return (
-          <a 
+          <a
             href={detail.href}
             className="text-blue-600 hover:underline"
             target="_blank"
@@ -30,39 +31,43 @@ function Learning({ learning, sectionId = 'presentations' }) {
   };
 
   return (
-    <section id={sectionId} className="mb-8">
+    <section id={sectionId}>
       <div className="flex justify-between items-center">
         <button
           onClick={toggleContent}
           className={`
-            mt-4 
-            p-3 
-            rounded 
-            font-bold 
-            text-lg 
-            w-full 
+            p-3
+            rounded-lg
+            font-bold
+            text-lg
+            w-full
             text-left
             touch-manipulation
-            active:bg-gray-600
-            ${isOpen ? 'bg-gray-500 text-white' : 'bg-gray-500 text-white'}
-            flex 
-            items-center 
+            transition-colors
+            ${isOpen
+              ? 'bg-amber-700 text-white'
+              : 'bg-amber-600 text-white hover:bg-amber-700'}
+            flex
+            items-center
             justify-between
           `}
         >
-          <span>{isOpen ? 'Hide Presentations' : 'Presentations'}</span>
-          <svg 
-            className={`w-6 h-6 transform transition-transform ${isOpen ? 'rotate-180' : ''}`} 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24" 
+          <span className="flex items-center gap-2">
+            <Presentation size={20} />
+            {isOpen ? 'Hide Presentations' : 'Presentations'}
+          </span>
+          <svg
+            className={`w-5 h-5 transform transition-transform ${isOpen ? 'rotate-180' : ''}`}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </button>
       </div>
-      
+
       {isOpen && (
         <div className="mt-4">
           {Object.keys(learning.sections).map((sectionKey) => (
@@ -72,7 +77,7 @@ function Learning({ learning, sectionId = 'presentations' }) {
               </h3>
               <div className="grid grid-cols-1 gap-6">
                 {learning.sections[sectionKey].items.map((item, index) => (
-                  <div key={index} className="border rounded-lg p-4 hover:shadow-lg transition-shadow">
+                  <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow bg-white">
                     <h4 className="text-base font-medium mb-2">{item.title}</h4>
                     <ul className="list-disc ml-6">
                       {item.details.map((detail, detailIndex) => {

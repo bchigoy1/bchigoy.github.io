@@ -105,12 +105,12 @@ export const portfolioData = {
   sections: {
     about: {
       title: "Hello! I'm Byron",
-      content:[ 
-[`I specialize in building user-centric data platforms and leading cross-functional teams in product development and technical innovation. My focus is on creating intuitive solutions that transform how professionals work with infrastructure and construction planning data.`],
+      content:[
+[`I specialize in building user-centric data platforms and leading cross-functional teams in product development and technical innovation. My focus is on creating intuitive solutions that transform how professionals work with infrastructure and construction planning data, increasingly by applying AI to automate the tedious and surface the meaningful.`],
 
-[`I've led the development of products that consolidate how transportation and engineering professionals approach their work, built platforms that handle complex data analysis while maintaining user simplicity, and collaborated with teams to deliver solutions that have saved billions in public sector costs.`],
+[`I've led the development of products that consolidate how transportation and engineering professionals approach their work, built platforms that handle complex data analysis while maintaining user simplicity, and collaborated with teams to deliver solutions that have informed billions in public sector investments.`],
 
-[`My joy is exploring new ideas and building bridges between technical capabilities and user needs. I studied Great Books at St. John's College in Annapolis, Maryland. This humanities background helps me approach product development with a unique perspective, focusing on human needs while solving complex technical challenges.`]]
+[`My joy is exploring new ideas and building bridges between technical capabilities and user needs. I studied Great Books at St. John's College in Annapolis, Maryland. This humanities background helps me approach product development with a unique perspective, asking not just "can AI do this?" but "should it, and how will it change the work?"`]]
     },
     teamBuilding: {
       title: "Team Building and Leadership",
@@ -119,7 +119,7 @@ export const portfolioData = {
           "Throughout my career, I've thrived on building and nurturing high-performing service, ",
           { type: "link", text: "Agile", href: "https://www.atlassian.com/agile" },
           " product and research teams. I lead with empathy and a deep commitment to understanding both user needs and team member aspirations. My approach centers on:"
-        ],        
+        ],
         {
           type: 'bullet',
           content: "Fostering collaborative environments where diverse perspectives drive innovation"
@@ -132,23 +132,31 @@ export const portfolioData = {
           type: 'bullet',
           content: "Building cross-functional teams that blend technical expertise with user-centered design thinking"
         },
-      ] 
+        {
+          type: 'bullet',
+          content: "Helping teams navigate AI adoption thoughtfully, identifying where automation adds value and where human expertise remains essential"
+        },
+      ]
     },
     infrastructure: {
       title: "Infrastructure and Research Innovation Through User-Centered Design",
       content: [
-        "At Whitman, Requardt and Associates, I am helping establise a data engineering and science practice focused on user needs:",
+        "At Whitman, Requardt and Associates, I am establishing a data engineering and science practice focused on user needs:",
 
         {
           type: 'bullet',
-          content: "Developed solutions that doubled data accessibility while maintaining intuitive user experiences"
+          content: "Developing AI-powered validation tools that use computer vision to automate traditionally manual data quality tasks, like counting road lanes from imagery at scale"
         },
         {
           type: 'bullet',
-          content: "Created products that revolutionized traditional engineering practices by focusing on user workflows and needs"
+          content: "Created solutions that doubled data accessibility while maintaining intuitive user experiences"
+        },
+        {
+          type: 'bullet',
+          content: "Building products that modernize traditional engineering practices by combining AI capabilities with deep understanding of user workflows"
         },
       ],
-      
+
     },
     improvingLives: {
       title: "Product Development Impact",
@@ -168,6 +176,10 @@ export const portfolioData = {
         {
           type: 'bullet',
           content: "Designed and implemented data integration solutions that combined multiple sources into comprehensive, user-friendly tools"
+        },
+        {
+          type: 'bullet',
+          content: "Built early foundations for AI-driven analytics by creating scalable data pipelines that transformed raw location signals into actionable insights"
         },
         {
           type: 'bullet',
@@ -244,22 +256,30 @@ export const portfolioData = {
         {
           type: 'bullet',
           content: "Worked closely with stakeholders across Federal, State, and City agencies to understand user needs and develop appropriate solutions"
-        },
+        }
       ]
     },
     background: {
       title: "Background & Exploration",
       content: [
-        ["Now I am based in Asheville, NC, where I own a small homestead in the South Toe River valley of the Black Mountains that I farm with my family. And I can be found hiking or exploring whenever possible."],
-        ["My humanities background informs my approach to technical innovation, helping me bridge the gap between complex data systems and human needs. And my career is accidental and product of my failures rather than any success. When I started no engineer wanted to hire me except one. And I took that as a challenge. Along the way, I was taught data and geospatial analysis by colleagues and Google/Stack Overflow. My questioning and curious nature earned the trust of leaders across agencies and organizations."],
+        ["I'm based in Asheville, NC, where I own a small homestead in the South Toe River valley of the Black Mountains that I farm with my family. I can be found hiking or exploring whenever possible."],
+        ["My humanities background informs my approach to technical innovation, helping me bridge the gap between complex data systems and human needs. My career is accidental and a product of my failures rather than any success. When I started, no engineer wanted to hire me except one. I took that as a challenge. Along the way, I was taught data and geospatial analysis by colleagues and Google/Stack Overflow. My questioning and curious nature earned the trust of leaders across agencies and organizations."],
         ["I continue exploring the intersection of data science, data engineering, infrastructure planning, and organizational transformation. Current interests include:"],
         {
           type: 'bullet',
-          content: "Modernizing infrastructure planning through artificial intelligence"
+          content: "Applying computer vision and large language models to infrastructure data challenges"
         },
         {
           type: 'bullet',
-          content: "Building data-driven organizational cultures"
+          content: "Building AI-augmented workflows that enhance rather than replace professional judgment"
+        },
+        {
+          type: 'bullet',
+          content: "Modernizing infrastructure planning through practical AI applications"
+        },
+        {
+          type: 'bullet',
+          content: "Building data-driven organizational cultures ready for AI adoption"
         },
         {
           type: 'bullet',
@@ -506,6 +526,24 @@ export const portfolioData = {
 
       }
      },
+    ai: {
+      title: "AI",
+      sections: {
+        imageAssessment: {
+          title: "Roadway Inventory Evaluation",
+          items: [
+            {
+              title: "Using AI and Data Workflows for Roadway Inventory Evaluation",
+              href: `${process.env.PUBLIC_URL}/AI_Image_Assessment.pdf`,
+              image: `${process.env.PUBLIC_URL}/images/ai_screenshot.png`,
+              details: [
+                "Developed an automated pipeline to evaluate roadway lanes and geometry across 8,000 miles of network in Orlando, FL. The workflow uses APIs to retrieve 48K Street View, aerial, and LiDAR images based on GIS network coordinates, stores them on Azure cloud, and leverages Azure AI Foundry to prompt a ChatGPT model for lane count evaluation. An untuned model achieved ~85% accuracy matching GIS-observed lanes at a total cost under $550."
+              ]
+            }
+          ]
+        }
+      }
+    },
     products: {
     title: "Products",  // Add this title
     sections: {
