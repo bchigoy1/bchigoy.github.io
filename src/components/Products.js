@@ -96,7 +96,7 @@ function Products({ products, sectionId = 'products', expanded = false }) {
                           )}
                         </h4>
                         {item.users && (
-                          <p className="text-sm text-gray-600 mb-2">
+                          <p className="text-base text-gray-600 mb-2">
                             <span className="font-medium">Users: </span>
                             {item.users}
                           </p>
@@ -106,7 +106,7 @@ function Products({ products, sectionId = 'products', expanded = false }) {
                             {item.details.map((detail, detailIndex) => {
                               const renderedDetail = renderDetail(detail);
                               return renderedDetail ? (
-                                <li key={detailIndex} className="text-sm">
+                                <li key={detailIndex} className="text-base text-gray-600">
                                   {renderedDetail}
                                 </li>
                               ) : null;

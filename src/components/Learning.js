@@ -69,13 +69,13 @@ function Learning({ learning, sectionId = 'presentations', expanded = false }) {
               </h3>
               <div className="grid grid-cols-1 gap-6">
                 {learning.sections[sectionKey].items.map((item, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow bg-white">
+                  <div key={index} className={expanded ? "mb-6" : "border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow bg-white"}>
                     <h4 className="text-base font-medium mb-2">{item.title}</h4>
                     <ul className="list-disc ml-6">
                       {item.details.map((detail, detailIndex) => {
                         const renderedDetail = renderDetail(detail);
                         return renderedDetail ? (
-                          <li key={detailIndex} className="text-sm">
+                          <li key={detailIndex} className="text-base text-gray-600">
                             {renderedDetail}
                           </li>
                         ) : null;

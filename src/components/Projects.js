@@ -69,38 +69,40 @@ function Projects({ projects, sectionId = 'projects', expanded = false }) {
               </h3>
               <div className="grid grid-cols-1 gap-6">
                 {projects.sections[sectionKey].items.map((item, index) => (
-                  <div key={index} className="relative border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow bg-white">
-                    <div className="group relative">
-                      <h4 className="text-base font-medium mb-2">
-                        {item.href ? (
-                          <a
-                            href={item.href}
-                            className="text-blue-600 hover:underline"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {item.title}
-                          </a>
-                        ) : (
-                          item.title
+                  <div key={index} className={expanded ? "mb-6" : "relative border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow bg-white"}>
+                    <div className="group">
+                      <div className="relative">
+                        <h4 className="text-base font-medium mb-2">
+                          {item.href ? (
+                            <a
+                              href={item.href}
+                              className="text-blue-600 hover:underline"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {item.title}
+                            </a>
+                          ) : (
+                            item.title
+                          )}
+                          {item.agency && (
+                            <span className="ml-1">
+                              {' @ '}
+                              {item.agency}
+                            </span>
+                          )}
+                        </h4>
+                        {item.tooltip && (
+                          <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity absolute left-0 top-full z-20 bg-gray-800 text-white p-3 rounded-md text-sm max-w-xl shadow-lg">
+                            {item.tooltip}
+                          </div>
                         )}
-                        {item.agency && (
-                          <span className="ml-1">
-                            {' @ '}
-                            {item.agency}
-                          </span>
-                        )}
-                      </h4>
-                      {item.tooltip && (
-                        <div className="opacity-0 group-hover:opacity-100 transition-opacity md:absolute md:left-full md:ml-2 z-10 bg-gray-800 text-white p-2 rounded-md text-sm md:w-96 mt-2 md:mt-0">
-                          {item.tooltip}
-                        </div>
-                      )}
+                      </div>
                       <ul className="list-disc ml-6">
                         {item.details.map((detail, detailIndex) => {
                           const renderedDetail = renderDetail(detail);
                           return renderedDetail ? (
-                            <li key={detailIndex} className="text-sm">
+                            <li key={detailIndex} className="text-base text-gray-600">
                               {renderedDetail}
                             </li>
                           ) : null;

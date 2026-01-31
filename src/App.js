@@ -3,12 +3,11 @@ import { Routes, Route } from 'react-router-dom';
 import { portfolioData } from './data/portfolio-data';
 import ProfileHeader from './components/ProfileHeader';
 import Summary from './components/Summary';
-import Research from './components/Research';
-import AI from './components/AI';
-import Products from './components/Products';
+import InnovationAndProducts from './components/InnovationAndProducts';
 import Projects from './components/Projects';
 import Learning from './components/Learning';
 import SkillsVenn from './components/SkillsVenn';
+import Contact from './components/Contact';
 import Career from './components/Career';
 import ResizablePanel from './components/ResizablePanel';
 
@@ -38,41 +37,19 @@ function App() {
               element={
                 <div className="md:h-full md:overflow-y-auto">
                   <div className="px-6 md:px-12 py-8">
-                    <ProfileHeader personal={personal} />
+                    <ProfileHeader personal={personal} showProfile />
                     <Summary data={sections.about} />
                   </div>
                 </div>
               }
             />
             <Route
-              path="/research"
+              path="/innovation"
               element={
                 <div className="md:h-full md:overflow-y-auto">
                   <div className="px-6 md:px-12 py-8">
                     <ProfileHeader personal={personal} />
-                    <Research data={sections.research} />
-                  </div>
-                </div>
-              }
-            />
-            <Route
-              path="/ai"
-              element={
-                <div className="md:h-full md:overflow-y-auto">
-                  <div className="px-6 md:px-12 py-8">
-                    <ProfileHeader personal={personal} />
-                    <AI ai={sections.ai} expanded />
-                  </div>
-                </div>
-              }
-            />
-            <Route
-              path="/products"
-              element={
-                <div className="md:h-full md:overflow-y-auto">
-                  <div className="px-6 md:px-12 py-8">
-                    <ProfileHeader personal={personal} />
-                    <Products products={sections.products} expanded />
+                    <InnovationAndProducts aiInnovation={sections.aiInnovation} research={sections.research} ai={sections.ai} products={sections.products} />
                   </div>
                 </div>
               }
@@ -106,6 +83,17 @@ function App() {
                   <div className="px-6 md:px-12 py-8">
                     <ProfileHeader personal={personal} />
                     <SkillsVenn />
+                  </div>
+                </div>
+              }
+            />
+            <Route
+              path="/contact"
+              element={
+                <div className="md:h-full md:overflow-y-auto">
+                  <div className="px-6 md:px-12 py-8">
+                    <ProfileHeader personal={personal} />
+                    <Contact data={sections.contact} />
                   </div>
                 </div>
               }

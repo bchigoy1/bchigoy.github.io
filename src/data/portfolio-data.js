@@ -1,7 +1,7 @@
 export const portfolioData = {
   personal: {
     name: "Byron Chigoy",
-    title: "Product Builder. Data engineer. AI practitioner. Great Books. Homesteader. The Venn diagram is small.",
+    title: ["Product Builder.", "Data engineer.", "AI practitioner.", "Telematics and Location Data.", "Great Books.", "Homesteader.", "The Venn diagram is small."],
     email: "bchigoy@gmail.com",
     phone: "+1 512-970-3965",
     location: "Asheville, North Carolina",
@@ -99,6 +99,13 @@ export const portfolioData = {
         description: "Managed book selection and inventory for premier international museum."
       },
       {
+        period: "1993 - 1999",
+        title: "Student @ University of Louisiana",
+        location: "Lafayette, LA",
+        link: "https://www.louisiana.edu/",
+        description: "Studied US History."
+      },
+      {
         period: "1996",
         title: "Dishwasher",
         description: "Where it all began."
@@ -108,9 +115,9 @@ export const portfolioData = {
 
   sections: {
     about: {
-      title: "Hello! I'm Byron",
+      title: "Hello, I'm Byron Chigoy",
       content: [
-        ["I build data platforms that transform how professionals work with location and telematics data, applying AI to automate the tedious and surface the meaningful. My work has informed over $500B in public sector investments and been integrated into federal DOT processes. I studied Great Books at St. John's College. My humanities background informs my approach to technical innovation, helping me bridge the gap between complex data systems and human needs."],
+        ["Great Books degree. Data engineering career. It makes more sense than it sounds\u2014my work has always been about making complex information legible to the people who need it. I've spent 20 years building data platforms for transportation and infrastructure, with my research informing over $500B in public investments. Now I'm interested in where AI can accelerate innovation by making complex systems simpler to use."],
         { type: 'heading', text: 'Product Impact' },
         ["At ", { type: 'bold', text: 'Texas A&M Transportation Institute' }, ", I helped prove telematics could work for transportation. Led a team of 10. Secured $20M+ in federal funding. Then did the hard part: got Federal and State agencies to trust it. At ", { type: 'bold', text: 'StreetLight Data' }, " (acquired by Jacobs), I helped turn that into an industry. I led development of SaaS products that became standards for location intelligence and mobility analytics, building early foundations for AI-driven insights from raw telematics data. At ", { type: 'bold', text: 'Whitman, Requardt and Associates' }, ", I'm taking it further: building a data engineering practice from scratch and using computer vision and geospatial analysis to automate what used to require manual work."],
         { type: 'heading', text: 'Current Interests' },
@@ -244,10 +251,47 @@ export const portfolioData = {
       ]},
       ]
     },
+    aiInnovation: {
+      title: "AI-Driven Innovation",
+      content: [
+        {
+          type: 'bullet',
+          content: "Advise DOTs and MPOs on AI governance, validation standards, and responsible deployment for transportation applications"
+        },
+        {
+          type: 'bullet',
+          content: "Automated invoice data extraction using document AI to parse vendor details, line items, and totals from unstructured PDFs into structured database records"
+        },
+        {
+          type: 'bullet',
+          content: "Developed a lane count validation pipeline using GPT-4o Vision to analyze aerial imagery (ESRI, NAIP), Google Street View, and LiDAR data against topographical networks"
+        },
+        {
+          type: 'bullet',
+          content: "Built blind counting methodology to eliminate AI anchoring bias, improving validation accuracy for statewide QC workflows"
+        },
+        {
+          type: 'bullet',
+          content: "Created multi-source comparison frameworks that cross-reference computer vision results across imagery types to identify discrepancies"
+        },
+        {
+          type: 'bullet',
+          content: "Architected Azure-based infrastructure combining blob storage, OpenAI endpoints, and PostGIS for scalable geospatial AI processing"
+        },
+        {
+          type: 'bullet',
+          content: "Use AI assistants for prototyping, and to stand up applications and data engineering pipelines"
+        },
+      ]
+    },
     research: {
-      title: "Research and Product Innovation",
+      title: "Research Innovation",
       content: [
         "At Texas A&M Transportation Institute, I focused on developing user-friendly platforms and tools:",
+        {
+          type: 'bullet',
+          content: "Early developer of data engineering, processes, and standards for using telematics and location data in safety and mobility products for the public sector"
+        },
         {
           type: 'bullet',
           content: "Created the Congestion Management Process Assessment Tools platform, emphasizing intuitive visualization and analysis for planners and engineers"
@@ -552,7 +596,7 @@ export const portfolioData = {
       }
     },
     products: {
-    title: "Products",  // Add this title
+    title: "Product Innovation",
     sections: {
       stl: {
         title: "StreetLight Data",  // Section title
@@ -654,6 +698,14 @@ export const portfolioData = {
       },
     },
    },
+    contact: {
+      title: "Contact+Resume",
+      location: "Asheville, North Carolina",
+      emails: ["bchigoy@gmail.com", "byron.chigoy@common-metrics.com"],
+      phone: "(512) 970-3965",
+      linkedin: "linkedin.com/in/byron-chigoy-257ba4b",
+      resumePdf: true,
+    },
     learning: {
       title: "Presentations & Publications",  // Add this title
       sections: {

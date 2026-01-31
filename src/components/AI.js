@@ -100,7 +100,7 @@ function AI({ ai, sectionId = 'ai', expanded = false }) {
                             {item.details.map((detail, detailIndex) => {
                               const renderedDetail = renderDetail(detail);
                               return renderedDetail ? (
-                                <li key={detailIndex} className="text-sm">
+                                <li key={detailIndex} className="text-base text-gray-600">
                                   {renderedDetail}
                                 </li>
                               ) : null;
