@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/bchigoy.github.io/static/css/main.05b9b70b.css",
-    "main.js": "/bchigoy.github.io/static/js/main.d7b326eb.js",
+    "main.css": "/bchigoy.github.io/static/css/main.592af5bc.css",
+    "main.js": "/bchigoy.github.io/static/js/main.64258995.js",
     "static/js/488.3864a508.chunk.js": "/bchigoy.github.io/static/js/488.3864a508.chunk.js",
     "index.html": "/bchigoy.github.io/index.html",
-    "main.05b9b70b.css.map": "/bchigoy.github.io/static/css/main.05b9b70b.css.map",
-    "main.d7b326eb.js.map": "/bchigoy.github.io/static/js/main.d7b326eb.js.map",
+    "main.592af5bc.css.map": "/bchigoy.github.io/static/css/main.592af5bc.css.map",
+    "main.64258995.js.map": "/bchigoy.github.io/static/js/main.64258995.js.map",
     "488.3864a508.chunk.js.map": "/bchigoy.github.io/static/js/488.3864a508.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.05b9b70b.css",
-    "static/js/main.d7b326eb.js"
+    "static/css/main.592af5bc.css",
+    "static/js/main.64258995.js"
   ]
 }
