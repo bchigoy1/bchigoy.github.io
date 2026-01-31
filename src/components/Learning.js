@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Presentation } from 'lucide-react';
 
-function Learning({ learning, sectionId = 'presentations' }) {
-  const [isOpen, setIsOpen] = useState(false);
+function Learning({ learning, sectionId = 'presentations', expanded = false }) {
+  const [isOpen, setIsOpen] = useState(expanded);
 
   const toggleContent = () => {
     setIsOpen(!isOpen);
@@ -30,46 +30,38 @@ function Learning({ learning, sectionId = 'presentations' }) {
     return null;
   };
 
+  const showContent = expanded || isOpen;
+
   return (
     <section id={sectionId}>
-      <div className="flex justify-between items-center">
-        <button
-          onClick={toggleContent}
-          className={`
-            p-3
-            rounded-lg
-            font-bold
-            text-lg
-            w-full
-            text-left
-            touch-manipulation
-            transition-colors
-            ${isOpen
-              ? 'bg-amber-700 text-white'
-              : 'bg-amber-600 text-white hover:bg-amber-700'}
-            flex
-            items-center
-            justify-between
-          `}
-        >
-          <span className="flex items-center gap-2">
-            <Presentation size={20} />
-            {isOpen ? 'Hide Presentations' : 'Presentations'}
-          </span>
-          <svg
-            className={`w-5 h-5 transform transition-transform ${isOpen ? 'rotate-180' : ''}`}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+      {!expanded && (
+        <div className="flex justify-between items-center">
+          <button
+            onClick={toggleContent}
+            className="p-3 rounded-lg font-bold text-lg w-full text-left touch-manipulation transition-colors text-white flex items-center justify-between"
+            style={{ backgroundColor: isOpen ? '#5E5E5C' : '#6E6E6C' }}
+            onMouseEnter={e => { if (!isOpen) e.currentTarget.style.backgroundColor = '#5E5E5C'; }}
+            onMouseLeave={e => { if (!isOpen) e.currentTarget.style.backgroundColor = '#6E6E6C'; }}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-      </div>
+            <span className="flex items-center gap-2">
+              <Presentation size={20} />
+              {isOpen ? 'Hide Presentations' : 'Presentations'}
+            </span>
+            <svg
+              className={`w-5 h-5 transform transition-transform ${isOpen ? 'rotate-180' : ''}`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
+      )}
 
-      {isOpen && (
-        <div className="mt-4">
+      {showContent && (
+        <div className={expanded ? '' : 'mt-4'}>
           {Object.keys(learning.sections).map((sectionKey) => (
             <div key={sectionKey} className="mb-8">
               <h3 className="text-lg font-semibold mb-4">

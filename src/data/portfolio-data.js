@@ -1,7 +1,7 @@
 export const portfolioData = {
   personal: {
     name: "Byron Chigoy",
-    title: "Building Data Analytics and Products for Improving Mobility and Infrastructure",
+    title: "Product Builder. Data engineer. AI practitioner. Great Books. Homesteader. The Venn diagram is small.",
     email: "bchigoy@gmail.com",
     phone: "+1 512-970-3965",
     location: "Asheville, North Carolina",
@@ -21,7 +21,7 @@ export const portfolioData = {
   }, 
   careers: [
     {
-      period: "Current - June 2023",
+      period: "Current",
       title: "Director of Data Engineering and Data Science @ Whitman, Requardt and Associates",
       location: "Asheville, NC",
       link: "https://wrallp.com/",
@@ -97,20 +97,28 @@ export const portfolioData = {
         location: "Washington, DC",
         link: "https://www.nga.gov/",
         description: "Managed book selection and inventory for premier international museum."
+      },
+      {
+        period: "1996",
+        title: "Dishwasher",
+        description: "Where it all began."
       }
-   
   ],
 
 
   sections: {
     about: {
       title: "Hello! I'm Byron",
-      content:[
-[`I specialize in building user-centric data platforms and leading cross-functional teams in product development and technical innovation. My focus is on creating intuitive solutions that transform how professionals work with infrastructure and construction planning data, increasingly by applying AI to automate the tedious and surface the meaningful.`],
-
-[`I've led the development of products that consolidate how transportation and engineering professionals approach their work, built platforms that handle complex data analysis while maintaining user simplicity, and collaborated with teams to deliver solutions that have informed billions in public sector investments.`],
-
-[`My joy is exploring new ideas and building bridges between technical capabilities and user needs. I studied Great Books at St. John's College in Annapolis, Maryland. This humanities background helps me approach product development with a unique perspective, asking not just "can AI do this?" but "should it, and how will it change the work?"`]]
+      content: [
+        ["I build data platforms that transform how professionals work with location and telematics data, applying AI to automate the tedious and surface the meaningful."],
+        ["My work has informed over $500B in public sector investments and been integrated into federal DOT processes. I studied Great Books at St. John's College. My humanities background informs my approach to technical innovation, helping me bridge the gap between complex data systems and human needs."],
+        { type: 'heading', text: 'Product Impact' },
+        ["At Texas A&M Transportation Institute, I helped prove telematics could work for transportation. Led a team of 10. Secured $20M+ in federal funding. Then did the hard part: got Federal and State agencies to trust it. At StreetLight Data (acquired by Jacobs), I helped turn that into an industry. I led development of SaaS products that became standards for location intelligence and mobility analytics, building early foundations for AI-driven insights from raw telematics data. At Whitman, Requardt and Associates, I'm taking it further: building a data engineering practice from scratch and using computer vision and geospatial analysis to automate what used to require manual work."],
+        { type: 'heading', text: 'Current Interests' },
+        { type: 'bullet', content: "Computer vision and LLMs for location data challenges" },
+        { type: 'bullet', content: "AI-augmented workflows that enhance professional judgment" },
+        { type: 'bullet', content: "Building data cultures ready for AI adoption" },
+      ]
     },
     teamBuilding: {
       title: "Team Building and Leadership",

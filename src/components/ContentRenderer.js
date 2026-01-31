@@ -22,7 +22,7 @@ const ContentRenderer = ({ content }) => {
 
     if (Array.isArray(item)) {
       return (
-        <p key={index} className="text-gray-600 text-base leading-5 mb-4">
+        <p key={index} className="text-gray-600 text-base leading-5 mb-0.5">
           {item.map((subItem, i) => renderSingleItem(subItem, `${index}-${i}`))}
         </p>
       );
@@ -52,6 +52,18 @@ const ContentRenderer = ({ content }) => {
               onClick={() => openModal(item)}
             />
           </div>
+        );
+
+      case 'italic':
+        return (
+          <em key={index}>{item.text}</em>
+        );
+
+      case 'heading':
+        return (
+          <h3 key={index} className="text-lg font-semibold text-brand-900 mt-2">
+            {item.text}
+          </h3>
         );
 
       case 'bullet':
@@ -87,7 +99,7 @@ const ContentRenderer = ({ content }) => {
 
   return (
     <>
-      <div className="space-y-4 mb-10">
+      <div className="space-y-0.5 mb-4">
         {!hasBullets ? (
           items.map((item, index) => renderSingleItem(item, index))
         ) : (

@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 
-const ResizablePanel = ({ children, minWidth = 250, maxWidth = 600 }) => {
+const ResizablePanel = ({ children, minWidth = 250, maxWidth = 600, onWidthChange }) => {
   const [width, setWidth] = useState(300);
   const [isResizing, setIsResizing] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -20,6 +20,12 @@ const ResizablePanel = ({ children, minWidth = 250, maxWidth = 600 }) => {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  useEffect(() => {
+    if (onWidthChange) {
+      onWidthChange(isMobile ? 0 : width);
+    }
+  }, [width, isMobile, onWidthChange]);
 
   const startResizing = useCallback(() => {
     if (!isMobile) setIsResizing(true);
@@ -51,9 +57,9 @@ const ResizablePanel = ({ children, minWidth = 250, maxWidth = 600 }) => {
   }, [resize, stopResizing]);
 
   return (
-    <div 
+    <div
       className={`
-        ${isMobile ? 'relative w-full' : 'fixed right-0'} 
+        ${isMobile ? 'relative w-full' : 'fixed right-0'}
         top-0 h-full border-l bg-white
       `}
       style={{ width: isMobile ? '100%' : width }}
