@@ -8,6 +8,7 @@ import AI from './components/AI';
 import Products from './components/Products';
 import Projects from './components/Projects';
 import Learning from './components/Learning';
+import SkillsVenn from './components/SkillsVenn';
 import Career from './components/Career';
 import ResizablePanel from './components/ResizablePanel';
 
@@ -18,7 +19,7 @@ function App() {
   const handlePanelWidth = useCallback((w) => setPanelWidth(w), []);
 
   return (
-    <div className="relative h-screen bg-gray-50 overflow-hidden">
+    <div className="relative min-h-screen md:h-screen bg-gray-50 md:overflow-hidden">
       {/* Semi-transparent background image — centered on main content area */}
       <div
         className="fixed top-0 left-0 bottom-0 bg-center bg-no-repeat bg-contain opacity-15 pointer-events-none z-0"
@@ -28,14 +29,14 @@ function App() {
         }}
       />
 
-      <div className="relative z-10 h-screen overflow-hidden">
+      <div className="relative z-10 min-h-screen md:h-screen md:overflow-hidden">
         {/* Main Content Column */}
-        <div className="h-full" style={{ marginRight: panelWidth }}>
+        <div className="md:h-full" style={{ marginRight: panelWidth }}>
           <Routes>
             <Route
               path="/"
               element={
-                <div className="h-full overflow-y-auto">
+                <div className="md:h-full md:overflow-y-auto">
                   <div className="px-6 md:px-12 py-8">
                     <ProfileHeader personal={personal} />
                     <Summary data={sections.about} />
@@ -46,7 +47,7 @@ function App() {
             <Route
               path="/research"
               element={
-                <div className="h-full overflow-y-auto">
+                <div className="md:h-full md:overflow-y-auto">
                   <div className="px-6 md:px-12 py-8">
                     <ProfileHeader personal={personal} />
                     <Research data={sections.research} />
@@ -57,7 +58,7 @@ function App() {
             <Route
               path="/ai"
               element={
-                <div className="h-full overflow-y-auto">
+                <div className="md:h-full md:overflow-y-auto">
                   <div className="px-6 md:px-12 py-8">
                     <ProfileHeader personal={personal} />
                     <AI ai={sections.ai} expanded />
@@ -68,7 +69,7 @@ function App() {
             <Route
               path="/products"
               element={
-                <div className="h-full overflow-y-auto">
+                <div className="md:h-full md:overflow-y-auto">
                   <div className="px-6 md:px-12 py-8">
                     <ProfileHeader personal={personal} />
                     <Products products={sections.products} expanded />
@@ -79,7 +80,7 @@ function App() {
             <Route
               path="/projects"
               element={
-                <div className="h-full overflow-y-auto">
+                <div className="md:h-full md:overflow-y-auto">
                   <div className="px-6 md:px-12 py-8">
                     <ProfileHeader personal={personal} />
                     <Projects projects={sections.projects} expanded />
@@ -90,10 +91,21 @@ function App() {
             <Route
               path="/presentations"
               element={
-                <div className="h-full overflow-y-auto">
+                <div className="md:h-full md:overflow-y-auto">
                   <div className="px-6 md:px-12 py-8">
                     <ProfileHeader personal={personal} />
                     <Learning learning={sections.learning} expanded />
+                  </div>
+                </div>
+              }
+            />
+            <Route
+              path="/skills"
+              element={
+                <div className="md:h-full md:overflow-y-auto">
+                  <div className="px-6 md:px-12 py-8">
+                    <ProfileHeader personal={personal} />
+                    <SkillsVenn />
                   </div>
                 </div>
               }

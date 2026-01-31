@@ -54,6 +54,11 @@ const ContentRenderer = ({ content }) => {
           </div>
         );
 
+      case 'bold':
+        return (
+          <strong key={index}>{item.text}</strong>
+        );
+
       case 'italic':
         return (
           <em key={index}>{item.text}</em>

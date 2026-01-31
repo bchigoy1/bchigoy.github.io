@@ -3,7 +3,7 @@ import ContentRenderer from './ContentRenderer';
 
 const Experience = ({ teamBuilding, infrastructure, improvingLives }) => {
   return (
-    <div className="space-y-10 md:space-y-16">
+    <div className="space-y-4 md:space-y-6">
       <section id="improving-lives">
         <h2 className="text-xl font-bold mb-4 text-brand-900">{improvingLives.title}</h2>
         <ContentRenderer content={improvingLives.content} />

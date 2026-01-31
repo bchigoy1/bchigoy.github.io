@@ -6,6 +6,7 @@ import {
   Package,
   FolderKanban,
   Presentation,
+  Target,
 } from 'lucide-react';
 
 const ProfileHeader = ({ personal }) => {
@@ -15,6 +16,7 @@ const ProfileHeader = ({ personal }) => {
     { to: '/products', text: 'Products', icon: Package },
     { to: '/projects', text: 'Projects', icon: FolderKanban },
     { to: '/presentations', text: 'Presentations', icon: Presentation },
+    { to: '/skills', text: 'Skills', icon: Target },
   ];
 
   return (

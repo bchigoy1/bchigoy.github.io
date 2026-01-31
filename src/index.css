@@ -4,7 +4,12 @@
 
 html, body, #root {
   height: 100%;
-  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  html, body, #root {
+    overflow: hidden;
+  }
 }
 
 /* Hide scrollbars but keep scrolling */

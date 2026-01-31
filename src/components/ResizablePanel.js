@@ -59,8 +59,8 @@ const ResizablePanel = ({ children, minWidth = 250, maxWidth = 600, onWidthChang
   return (
     <div
       className={`
-        ${isMobile ? 'relative w-full' : 'fixed right-0'}
-        top-0 h-full border-l bg-white
+        ${isMobile ? 'relative w-full border-t' : 'fixed right-0 top-0 h-full border-l'}
+        bg-white
       `}
       style={{ width: isMobile ? '100%' : width }}
     >
@@ -71,7 +71,7 @@ const ResizablePanel = ({ children, minWidth = 250, maxWidth = 600, onWidthChang
           onMouseDown={startResizing}
         />
       )}
-      <div className="h-full overflow-y-auto p-4 md:p-6">
+      <div className={`${isMobile ? '' : 'h-full'} overflow-y-auto p-4 md:p-6`}>
         {children}
       </div>
     </div>
